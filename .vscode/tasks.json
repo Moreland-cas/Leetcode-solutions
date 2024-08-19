@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",             // 任务名称
+            "type": "shell",
+            "command": "g++",             // 使用 g++ 进行编译
+            "args": [
+                "-g",                    // 生成调试信息
+                "${file}",               // 当前打开的文件
+                "-o", "${workspaceFolder}/debug"  // 输出的可执行文件名
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],  // 错误匹配器
+            "detail": "Generated task by VS Code."
+        }
+    ]
+}
